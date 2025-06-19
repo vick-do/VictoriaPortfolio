@@ -47,7 +47,7 @@ nav {
   z-index: 999;
   position: fixed;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   height: 90px;
   line-height: 50px;
@@ -668,59 +668,153 @@ align-items: center;
   }
 }
 
-.section-4 {
-  height: 70vh;
-  background-color: black;
-  margin: auto;
-  max-width: 900px;
-  border-radius: 9px;
-  box-shadow: 0 2px 8px white;
-  padding: 20px;
-  margin-top: 60px;
-  /* padding: top 400px; ; */
-}
+ /* body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a1a; /* Dark background for the whole page */
+            /* display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+            margin: 0; */
+        /* } */ */
 
-.email-number {
-  color: rgb(177, 134, 26);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: underline;
-  padding-top: 50px;
-  font-size: 20px;
-}
+        .container {
+            width: 100%;
+            max-width: 960px; /* Equivalent to max-w-4xl */
+            padding: 32px; /* Equivalent to p-8 */
+            border-radius: 12px; /* Equivalent to rounded-xl */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Equivalent to shadow-lg */
+            background-color: #000000; /* Custom black background */
+        }
 
-.logo-2 {
-  color: rgb(177, 134, 26);
-  /* align-items: center; */
-  font-size: 30px;
-  padding-top: 100px;
-  justify-content: center;
-  padding-left: 27rem;
-}
+        .heading {
+            font-size: 36px; /* Equivalent to text-4xl */
+            font-weight: 700; /* Equivalent to font-bold */
+            text-align: center;
+            margin-bottom: 32px; /* Equivalent to mb-8 */
+            color: black; /* Gold color */
+        }
 
-#logo {
-  width: 200px;
-  height: 100px;
-  margin-left: 310px;
-    margin-top: 100px;
-}
+        .section-4 {
+            display: flex;
+            flex-direction: column; /* flex-col for mobile */
+            align-items: center;
+            justify-content: space-between;
+            gap: 32px; /* Equivalent to gap-8 */
+            padding: 24px; /* Equivalent to p-6 */
+            border-radius: 12px; /* Equivalent to rounded-xl */
+        }
 
-.cv {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  background-color: rgb(177, 134, 26);
-  color: white;
-  border: none;
-  margin-top: 100px;
-  border-radius: 22px;
-  cursor: pointer;
-  margin-left: 360px;
-}
+        @media (min-width: 768px) { /* md: breakpoint */
+            .section-4 {
+                flex-direction: row; /* md:flex-row */
+            }
+        }
 
-.Contact{
-color: white;
+        .email-number {
+            color: black; /* Gold color */
+            text-align: center;
+            space-y-2: 8px; /* For spacing between paragraphs */
+        }
 
-}
+        .email-number p {
+            font-size: 18px; /* Equivalent to text-lg */
+            margin-bottom: 8px;
+        }
+
+        .logo {
+            width: 128px; /* Equivalent to w-32 */
+            height: 128px; /* Equivalent to h-32 */
+            border-radius: 9999px; /* Equivalent to rounded-full */
+            object-fit: cover;
+            border: 4px solid #FFD700; /* Equivalent to border-4 border-gold-custom */
+            flex-shrink: 0; /* Equivalent to flex-shrink-0 */
+        }
+
+        .cv-2 {
+            padding: 12px 24px; /* Equivalent to px-6 py-3 */
+            background-color: #FFD700; /* Gold color */
+            color: #000000; /* Black text */
+            font-weight: 600; /* Equivalent to font-semibold */
+            border-radius: 8px; /* Equivalent to rounded-lg */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Equivalent to shadow-md */
+            transition: background-color 0.3s ease; /* Equivalent to transition-colors duration-300 */
+            flex-shrink: 0; /* Equivalent to flex-shrink-0 */
+        }
+
+        .cv-2:hover {
+            background-color: #DAA520; /* Darker yellow for hover, equivalent to hover:bg-yellow-600 */
+        }
+
+        .contact-form-section {
+            margin-top: 48px; /* Equivalent to mt-12 */
+            padding: 24px; /* Equivalent to p-6 */
+            border-radius: 12px; /* Equivalent to rounded-xl */
+            background-color: #000000; /* Custom black background */
+            border: 1px solid #FFD700; /* Equivalent to border border-gold-custom */
+        }
+
+        .contact-form-section h3 {
+            font-size: 28px; /* Equivalent to text-3xl */
+            font-weight: 600; /* Equivalent to font-semibold */
+            text-align: center;
+            margin-bottom: 24px; /* Equivalent to mb-6 */
+            color: #FFD700; /* Gold color */
+        }
+
+        .form-group {
+            margin-bottom: 24px; /* Equivalent to space-y-6 for each group */
+        }
+
+        .form-group label {
+            display: block;
+            color: #FFD700; /* Gold color */
+            font-size: 18px; /* Equivalent to text-lg */
+            font-weight: 500; /* Equivalent to font-medium */
+            margin-bottom: 8px; /* Equivalent to mb-2 */
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px; /* Equivalent to px-4 py-3 */
+            background-color: #1f2937; /* Equivalent to bg-gray-800 */
+            color: #FFD700; /* Gold color */
+            border: 1px solid #FFD700; /* Equivalent to border border-gold-custom */
+            border-radius: 8px; /* Equivalent to rounded-lg */
+            outline: none;
+            box-sizing: border-box; /* Ensures padding doesn't add to the width */
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #9ca3af; /* Equivalent to placeholder-gray-500 */
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            ring: 2px solid #FFD700; /* Equivalent to focus:ring-2 focus:ring-gold-custom */
+            border-color: #FFD700;
+        }
+
+        .submit-button-container {
+            text-align: center;
+        }
+
+        .submit-button {
+            padding: 16px 32px; /* Equivalent to px-8 py-4 */
+            background-color: #FFD700; /* Gold color */
+            color: #000000; /* Black text */
+            font-weight: 700; /* Equivalent to font-bold */
+            font-size: 20px; /* Equivalent to text-xl */
+            border-radius: 8px; /* Equivalent to rounded-lg */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* Equivalent to shadow-xl */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Equivalent to transition-colors duration-300 transform */
+        }
+
+        .submit-button:hover {
+            background-color: #DAA520; /* Darker yellow for hover, equivalent to hover:bg-yellow-600 */
+            transform: scale(1.05); /* Equivalent to hover:scale-105 */
+        }
